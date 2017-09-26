@@ -1,0 +1,21 @@
+- name: "Installing additional"
+  apt: pkg={{ item }} state=installed
+  with_items:
+      - vim
+      - apache2
+  state: present
+
+- name: replace index.html
+  copy:
+      dest: /var/www/html/index.html
+      content: "Hi I'm the host {{ ansible_hostname }}"
+
+- name: apache2 listen on port 8081
+  lineinfile: dest=/etc/apache2/ports.conf regexp="^Listen 80" line="Listen 8081" state=present
+  notify:
+    - restart apache2
+
+- name: apache2 virtualhost on port 8081
+  lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp="^<VirtualHost \*:80>" line="<VirtualHost *:8081>" state=present
+  notify:
+    - restart apache2
