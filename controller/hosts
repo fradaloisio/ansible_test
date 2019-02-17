@@ -11,3 +11,6 @@ vm3
 
 [all_vms]
 vm[1:3]
+
+[users:children]
+all_vms

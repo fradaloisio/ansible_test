@@ -1,0 +1,6 @@
+---
+- hosts: all_vms
+  become: true
+  roles:
+    - role: common
+    - role: ansible-users

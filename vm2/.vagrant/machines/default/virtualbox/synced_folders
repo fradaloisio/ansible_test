@@ -1,1 +1,1 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/vivi/ansible/vm2","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/opt/git/ansible_test/vm2","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}

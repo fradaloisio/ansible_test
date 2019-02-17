@@ -1,0 +1,18 @@
+---
+users:
+  - username: foo
+    password: $1$8nWxKR4n$Nk1unp1r6gz7..yJwNRHp0
+    name: Foo
+    groups: ['foo','systemd-journal','bar']
+    uid: 1005
+    home: /home/foo
+    profile: |
+      alias ll='ls -ahl'
+  - username: bar
+    password: $1$8nWxKR4n$Nk1unp1r6gz7..yJwNRHp0
+    name: Bar
+    groups: ['foo','systemd-journal','bar']
+    uid: 1006
+    home: /home/bar
+    profile: |
+      alias ll='ls -ahl'
